@@ -35,7 +35,6 @@ Mert Korkali (University of Missouri, Columbia)
 
 # Citing 
 If you use this work in your research, we kindly ask that you cite this package as follows: 
-
 Dimas, George, Amin Masoumi, and Mert Korkali. "Feasibility-Aware Security-Constrained Unit Commitment via Hybrid Soft Actor-Critic with Quantum-Sampled Features." arXiv preprint arXiv:2606.26345 (2026).
 
 # References
