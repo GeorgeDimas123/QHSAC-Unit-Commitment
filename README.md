@@ -8,7 +8,11 @@ Run the following command in python:
 ```python
 pip install numpy torch matplotlib qiskit qiskit-aer qiskit-ibm-runtime juliacall
 ```
-
+Run the following command in julia as well:
+```julia
+using Pkg
+Pkg.add(["UnitCommitment", "JuMP", "Cbc", "JSON", "Gurobi", "MathOptInterface"])
+```
 
 # How to use
 blah blah blah
