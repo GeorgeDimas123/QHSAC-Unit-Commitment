@@ -1,7 +1,7 @@
 # QHSAC Unit Commitment
 The Qauntum Hybrid Soft Actor-Critic agent presented here is intended to demonstrate the potiential implementation of quantum computing techniques for the well-known HSAC reinforcement learning framework. This repository contains the code and data the corresponding IEEE SmartGridComm 2026 paper, "Feasibility-Aware Security-Constrained Unit Commitment via Hybrid Soft Actor-Critic with Quantum-Sampled Features".
 
-IEEE SmartGridComm 2026 publication: TBD
+IEEE SmartGridComm 2026 publication: https://arxiv.org/abs/2606.26345
 
 # Installation & Setup
 Run the following command in python:
@@ -34,7 +34,9 @@ Amin Masoumi (University of Missouri, Columbia)
 Mert Korkali (University of Missouri, Columbia)
 
 # Citing 
-If you use this work in your research, we kindly ask that you cite this package as follows: TBD
+If you use this work in your research, we kindly ask that you cite this package as follows: 
+
+Dimas, George, Amin Masoumi, and Mert Korkali. "Feasibility-Aware Security-Constrained Unit Commitment via Hybrid Soft Actor-Critic with Quantum-Sampled Features." arXiv preprint arXiv:2606.26345 (2026).
 
 # References
 [1] Y. Chen et al., “Security-constrained unit commitment for electricity
