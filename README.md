@@ -1,1 +1,1 @@
-# QHSAC-Unit-Commitment
+# QHSAC Unit Commitment
