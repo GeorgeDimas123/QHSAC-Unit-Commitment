@@ -55,7 +55,7 @@ class HSACAgent:
                 a2 = probs_next
                 q1t = self.q1t(s2, a2)
                 q2t = self.q2t(s2, a2)
-                ent = - (probs_next*probs_next.clamp(1e-9).log()).sum(dim=-1, keepdim=True)
+                ent = - (probs_next*probs_next.clamp(1e-9).log()).sum(dim=-1)
                 q_target = torch.min(q1t, q2t) - self.alpha * ent
                 y = r.squeeze(-1) + self.gamma * (1.0 - d.squeeze(-1)) * q_target
             q1_pred = self.q1(s, a)
@@ -69,7 +69,7 @@ class HSACAgent:
             a_sample = torch.bernoulli(probs)
             q1_a = self.q1(s, a_sample); q2_a = self.q2(s, a_sample)
             q_a = torch.min(q1_a, q2_a)
-            entropy = - (probs*probs.clamp(1e-9).log() + (1-probs)*(1-probs).clamp(1e-9).log()).sum(dim=-1, keepdim=True)
+            entropy = - (probs*probs.clamp(1e-9).log() + (1-probs)*(1-probs).clamp(1e-9).log()).sum(dim=-1)
             actor_loss = - (q_a + self.alpha * entropy).mean()
             self.opt_actor.zero_grad(); actor_loss.backward(); self.opt_actor.step()
             with torch.no_grad():
