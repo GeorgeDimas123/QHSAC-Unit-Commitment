@@ -4,7 +4,9 @@ The Qauntum Hybrid Soft Actor-Critic agent presented here is intended to demonst
 IEEE SmartGridComm 2026 publication: TBD
 
 # Installation & Setup
-blah blah blah
+This code requires the following packages to be installed:
+
+
 
 # How to use
 blah blah blah
