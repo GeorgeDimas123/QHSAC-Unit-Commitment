@@ -11,7 +11,9 @@ blah blah blah
 
 # Authors
 George Dimas (University of Missouri, Columbia)
+
 Amin Masoumi (University of Missouri, Columbia)
+
 Mert Korkali (University of Missouri, Columbia)
 
 # Citing 
