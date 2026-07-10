@@ -7,13 +7,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 from Classes.UCRLEnv import UCRLEnv
-from qiskit_script import QUICK_TEST, TRAIN_EPISODES_QUICK, TRAIN_EPISODES_FULL, QPU_EVAL_EPISODES, QPU_EVAL_SHOTS, QPU_BACKEND
+from qiskit_script import TRAIN_EPISODES_FULL, POWER_SYSTEM, QPU_EVAL_EPISODES, QPU_EVAL_SHOTS
 from Classes.reward_shaper import RewardShaper
 from Classes.HSACAgent import HSACAgent
 from plotting_functions import make_results_dir, save_episode_data, plot_learning_curve, plot_histogram, summarize_actions
 import qiskit_script
-
-# MAKING CHANGE ON NEW BRANCH
 
 def train_hsac(episodes:int=TRAIN_EPISODES_FULL, instance_name:str=qiskit_script.POWER_SYSTEM,
                use_quantum_features:bool=False, device:str='cpu', outdir:str=None):
@@ -123,11 +121,11 @@ if __name__ == "__main__":
     print("HSAC + Quantum UC single-file runner")
     outdir = make_results_dir()
     # select training size
-    episodes = TRAIN_EPISODES_QUICK if QUICK_TEST else TRAIN_EPISODES_FULL
-    print(f"QUICK_TEST={QUICK_TEST}; running {episodes} episodes. Results will be saved to: {outdir}")
+    episodes = TRAIN_EPISODES_FULL
+    print(f"running {episodes} episodes. Results will be saved to: {outdir}")
 
     milp_cost = UCRLEnv(instance_name=qiskit_script.POWER_SYSTEM).get_milp_cost()
-    print("MILP baseline cost (case1354pegase):", milp_cost)
+    print("MILP baseline cost:", milp_cost)
 
     # traing RL on simulator first
     agent_sim, costs_sim, history_actions_sim, shots_sim, times_sim = train_hsac(episodes=episodes, instance_name=qiskit_script.POWER_SYSTEM,
