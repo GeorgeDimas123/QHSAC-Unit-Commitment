@@ -37,7 +37,7 @@ Mert Korkali (University of Missouri, Columbia)
 If you use this work in your research, we kindly ask that you cite this package as follows: TBD
 
 # References
-1] Y. Chen et al., “Security-constrained unit commitment for electricity
+[1] Y. Chen et al., “Security-constrained unit commitment for electricity
 market: Modeling, solution methods, and future challenges,” IEEE Trans.
 Power Syst., vol. 38, no. 5, pp. 4668–4681, Sep. 2023.
 
