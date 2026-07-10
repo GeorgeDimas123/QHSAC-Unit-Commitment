@@ -15,7 +15,16 @@ Pkg.add(["UnitCommitment", "JuMP", "Cbc", "JSON", "Gurobi", "MathOptInterface"])
 ```
 
 # How to use
-blah blah blah
+After installing the necessary packages, modify the training parameters. Customize the number of training episodes for the agent, as well as the power system instance that the agent should train on. Benchmark instances can be found at the UnitCommitment.jl documentation website [here](https://anl-ceeesa.github.io/UnitCommitment.jl/0.3/instances/).
+```python
+TRAIN_EPISODES_FULL = 1000 # <-- CHANGE THIS FOR SIMULATION TRAINING SESSIONS
+POWER_SYSTEM = "matpower/case57/2017-01-01"  # <-- CHANGE THIS TO YOUR PREFERRED TEST INSTANCE	
+```
+
+Once the training parameters are inputted, run the following command in the terminal:
+```windows
+python main.py
+```
 
 # Authors
 George Dimas (University of Missouri, Columbia)
