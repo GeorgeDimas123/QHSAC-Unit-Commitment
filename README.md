@@ -4,8 +4,10 @@ The Qauntum Hybrid Soft Actor-Critic agent presented here is intended to demonst
 IEEE SmartGridComm 2026 publication: TBD
 
 # Installation & Setup
-This code requires the following packages to be installed:
-
+Run the following command in python:
+```python
+pip install numpy torch matplotlib qiskit qiskit-aer qiskit-ibm-runtime juliacall
+```
 
 
 # How to use
