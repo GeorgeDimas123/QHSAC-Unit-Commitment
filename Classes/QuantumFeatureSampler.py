@@ -37,26 +37,11 @@ class QuantumFeatureSampler:
         # runtime availability
         self.QISKIT_RUNTIME_AVAILABLE = QISKIT_RUNTIME_AVAILABLE
 
-    # def _make_simple_pqc(self):
-    #     from qiskit import QuantumCircuit
-    #     qc = QuantumCircuit(self.n_qubits, self.n_qubits)
-    #     for q in range(self.n_qubits):
-    #         qc.h(q)
-    #     qc.measure_all()
-    #     return qc
-    
     def _make_simple_pqc(self):
         from qiskit import QuantumCircuit
         qc = QuantumCircuit(self.n_qubits, self.n_qubits)
-       
-         # 1. Feature Map Initialization
         for q in range(self.n_qubits):
-             qc.h(q)
-           
-         # 2. Entanglement Layer
-        for i in range(self.n_qubits - 1):
-            qc.cx(i, i + 1)
-           
+            qc.h(q)
         qc.measure_all()
         return qc
     
